@@ -151,10 +151,6 @@ nav.links a.lk:hover::after{right:0}
 .case-fig{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--fig-mat);border:1px solid var(--line);box-shadow:var(--shadow)}
 .case-fig img{width:100%;height:auto}
 .case-fig .cap{display:block;font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:#5a6b78;padding:11px 16px;border-top:1px solid rgba(21,36,47,.10);background:#fff}
-.case-fig .basin{width:100%;height:auto;display:block;background:var(--fig-mat)}
-.basin .ring{fill:none;stroke:#c4d2dc}
-.basin .river{fill:none;stroke:#2166a8;stroke-linecap:round;opacity:.9}
-.basin .node{fill:#2166a8}
 .case-body .tag{display:inline-flex;align-items:center;gap:.5rem;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.9rem}
 .case-body .tag .sq{width:11px;height:11px;border-radius:3px}
 .case.crop .tag .sq{background:var(--crop)} .case.water .tag .sq{background:var(--water)} .case.risk .tag .sq{background:var(--risk)}
@@ -385,7 +381,7 @@ footer.site .soc svg{width:17px;height:17px}
       <article class="svc water reveal d1">
         <div class="tag"><span class="sq"></span>Water resources &amp; hydrology</div>
         <h3>Is there enough water?</h3>
-        <p>Watershed delineation, water yield and ecosystem-service modelling (InVEST), drought monitoring, and rainfall-runoff analysis, grounded in a graduate background in hydrometeorology.</p>
+        <p>Watershed delineation, water yield and ecosystem-service modelling (InVEST), drought monitoring, and rainfall-runoff analysis. My graduate training is in hydrometeorology, so this is home ground.</p>
         <div class="eg"><b>e.g.</b>&nbsp; water yield under climate change, Meta River basin, Colombia</div>
       </article>
       <article class="svc risk reveal d2">
@@ -446,7 +442,7 @@ footer.site .soc svg{width:17px;height:17px}
       <div class="case-body">
         <div class="tag"><span class="sq"></span>Climate vulnerability</div>
         <h3>Which sky islands lose the most under warming?</h3>
-        <p>Páramos above the Andean treeline supply water to millions and host Espeletia, one of the fastest-evolving plant groups on Earth. I modelled 28 taxa across 36 páramo complexes, coupling climate sensitivity to adaptive capacity under RCP 8.5 for 2050. The diverse eastern páramos came out most vulnerable. The paper was picked up by the Frontiers press office and Courthouse News.</p>
+        <p>Páramos sit above the Andean treeline and feed water to millions of people downstream. They are also home to Espeletia, a genus that radiated into dozens of species unusually fast, which makes it a sharp early warning for climate stress. I modelled 28 taxa across 36 páramo complexes, pairing each complex's climate sensitivity with its capacity to adapt under RCP 8.5 to a 2050 horizon. The species-rich eastern complexes came out most exposed.</p>
         <ul class="case-specs">
           <li>28 taxa across 36 páramo complexes</li>
           <li>Climate sensitivity coupled to adaptive-capacity index</li>
@@ -463,34 +459,17 @@ footer.site .soc svg{width:17px;height:17px}
 
     <article class="case water reveal">
       <div class="case-fig">
-        <svg class="basin" viewBox="0 0 420 320" role="img" aria-label="Stylised river-basin schematic with elevation contour rings and a dendritic river network draining to an outlet.">
-          <ellipse class="ring" cx="210" cy="150" rx="185" ry="132" stroke-width="1.4"/>
-          <ellipse class="ring" cx="204" cy="152" rx="150" ry="106" stroke-width="1.4"/>
-          <ellipse class="ring" cx="196" cy="156" rx="112" ry="80" stroke-width="1.4"/>
-          <ellipse class="ring" cx="188" cy="160" rx="74" ry="52" stroke-width="1.4"/>
-          <ellipse class="ring" cx="180" cy="164" rx="38" ry="26" stroke-width="1.4"/>
-          <path class="river" stroke-width="3.2" d="M372 250 C320 232 300 214 268 208 C232 200 214 176 196 150"/>
-          <path class="river" stroke-width="2.2" d="M196 150 C182 128 176 104 150 86 C132 74 120 58 108 40"/>
-          <path class="river" stroke-width="1.8" d="M196 150 C178 150 152 150 128 138 C108 128 84 122 62 118"/>
-          <path class="river" stroke-width="1.6" d="M268 208 C250 202 232 196 216 176"/>
-          <path class="river" stroke-width="1.5" d="M150 86 C138 92 122 96 104 92"/>
-          <path class="river" stroke-width="1.5" d="M128 138 C122 156 112 172 96 182"/>
-          <circle class="node" cx="372" cy="250" r="5.5"/>
-          <circle class="node" cx="108" cy="40" r="3"/>
-          <circle class="node" cx="62" cy="118" r="3"/>
-          <circle class="node" cx="104" cy="92" r="2.4"/>
-          <circle class="node" cx="96" cy="182" r="2.4"/>
-        </svg>
-        <span class="cap">Fig. Watershed and water-yield schematic, Meta River basin</span>
+        <img src="assets/meta-water-yield.png" alt="Map of the Meta River basin in Colombia showing modelled annual water yield in millimetres per year, from under 1,100 to over 3,200, with subbasins, gauging stations, and main rivers.">
+        <span class="cap">Fig. Modelled annual water yield (mm/year), Meta River basin and subbasins, Colombia</span>
       </div>
       <div class="case-body">
         <div class="tag"><span class="sq"></span>Water resources</div>
         <h3>How will water yield shift in the Meta River basin?</h3>
-        <p>The Meta is one of Colombia's major river basins and a good test of whether global ecosystem-service tools hold up locally. I applied the InVEST annual water yield model, validated it against observed flow, then projected change under future climate. It was among the first InVEST water-yield applications benchmarked for Colombian rivers.</p>
+        <p>The Meta drains a wide stretch of Colombia's eastern plains, and it made a fair test of whether a global ecosystem-service tool holds up on a tropical basin it was never tuned for. I ran the InVEST annual water yield model across the basin and its subbasins, checked the output against gauging-station records, then pushed it forward under a future climate scenario. Modelled yield spanned roughly 0 to 5,300 mm per year, highest along the Andean headwaters in the west and easing off across the plains to the east.</p>
         <ul class="case-specs">
-          <li>InVEST annual water yield model</li>
-          <li>Validated against observed discharge</li>
-          <li>Climate-change projection of basin water balance</li>
+          <li>InVEST annual water yield model, run per subbasin</li>
+          <li>Calibrated against gauging-station discharge</li>
+          <li>Future-climate projection of the basin water balance</li>
         </ul>
         <div class="case-proof">
           <span class="pub">Published in <b>Water</b> (2023) and <b>Hydrology</b> (2024)</span>
@@ -575,19 +554,19 @@ footer.site .soc svg{width:17px;height:17px}
     <div class="section-head reveal">
       <span class="eyebrow">Open notebooks</span>
       <h2>Methods you can open and run</h2>
-      <p class="lead">A sample of the reproducible notebooks I publish openly, covering the everyday building blocks of spatial and climate analysis. The same standard of documentation goes into client work.</p>
+      <p class="lead">A few of the notebooks I keep public. They cover the everyday building blocks of spatial and climate analysis, and the client work is documented to the same standard.</p>
     </div>
     <div class="nb-grid">
       <article class="nb k-gee reveal">
         <div class="kind"><span class="dot"></span>GEE · Python · Colab</div>
         <h3>Spatial data with Google Earth Engine</h3>
-        <p>A hands-on Colab tutorial for accessing, processing, and exporting satellite and spatial datasets through the Earth Engine Python API.</p>
+        <p>A Colab walkthrough for pulling, processing, and exporting satellite data through the Earth Engine Python API.</p>
         <a class="open" href="https://gist.github.com/Brianvgarcia/f21183fc5dad371ebd75854b375baec7" target="_blank" rel="noopener">Open notebook<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       </article>
       <article class="nb k-clim reveal d1">
         <div class="kind"><span class="dot"></span>Climate · Python · Bias correction</div>
         <h3>CHIRPS rainfall, three correction methods</h3>
-        <p>Bias-correcting CHIRPS satellite rainfall against station data with three approaches, the kind of correction that underpins reliable agro-climatic analysis.</p>
+        <p>Three methods for correcting CHIRPS satellite rainfall against gauge data, compared side by side, so the rainfall series is sound before anything gets built on it.</p>
         <a class="open" href="https://gist.github.com/Brianvgarcia/b836920f733050654bd82ea884d6a944" target="_blank" rel="noopener">Open notebook<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       </article>
       <article class="nb k-geo reveal d2">
@@ -606,13 +585,13 @@ footer.site .soc svg{width:17px;height:17px}
       <article class="nb k-rea reveal d1">
         <div class="kind"><span class="dot"></span>Climate · Reanalysis · Python</div>
         <h3>NOAA reanalysis data in Python</h3>
-        <p>Pulling, subsetting, and analysing gridded atmospheric records from NOAA climate reanalysis, a common starting point for climate-driven modelling.</p>
+        <p>Working with gridded NOAA climate reanalysis in Python: reading the fields, cutting them to a region, and pulling out the series you actually need.</p>
         <a class="open" href="https://gist.github.com/Brianvgarcia/5798ca450e0292e3a37c1541dd388a02" target="_blank" rel="noopener">Open notebook<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       </article>
       <article class="nb k-lu reveal d2">
         <div class="kind"><span class="dot"></span>Land-use change · CA-Markov</div>
         <h3>Predicting future land use, Caquetá</h3>
-        <p>A CA-Markov model projecting future land use in Caquetá, Colombia, combining historical transitions with cellular-automata simulation.</p>
+        <p>A CA-Markov model that projects future land use in Caquetá, Colombia, from historical transition rates and a cellular-automata simulation.</p>
         <a class="open" href="https://gist.github.com/Brianvgarcia/ce1b3bdafffe49ca7cb686df45cb5c08" target="_blank" rel="noopener">Open notebook<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       </article>
     </div>
@@ -635,7 +614,7 @@ footer.site .soc svg{width:17px;height:17px}
       <div class="about-copy reveal d1">
         <span class="eyebrow">About</span>
         <h2>A field engineer who moved into orbit</h2>
-        <p>I am a Colombian agricultural engineer who kept following the same question from the ground up into the satellite record: how do we help farmers and ecosystems adapt to a changing climate? That path ran from fieldwork, to a Master's in hydrometeorology at <b>Kazan Federal University</b> in Russia, into geospatial machine learning.</p>
+        <p>I am a Colombian agricultural engineer who kept following the same question from the ground up into the satellite record: how do we help farmers and ecosystems adapt to a changing climate? That path ran from fieldwork to a Master's in hydrometeorology at <b>Kazan Federal University</b> in Russia, and then into geospatial machine learning.</p>
         <p>Over twelve years I have worked across the páramos of the Andes, the farming systems of sub-Saharan Africa, and precision agriculture in Australia. I spent three and a half years at <b>CIAT</b> on climate risk assessment, collaborated with <b>Curtin University</b>, and since 2023 I have been with the <b>African Plant Nutrition Institute</b>, where I build spatial frameworks for nutrient stewardship and climate resilience. Alongside that I am completing a PhD at the <b>University of Twente (ITC)</b>.</p>
         <p>I care about reproducibility and outputs people can actually use. Everything I deliver comes with the code, the documentation, and clear methods, so your team can update or extend it later. If a project is a good fit, I will say so plainly, and if it is not, I will tell you that too.</p>
         <div class="chips">
