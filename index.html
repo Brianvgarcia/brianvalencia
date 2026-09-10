@@ -11,7 +11,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en">
 <meta property="og:locale:alternate" content="es">
-<!-- SEO language links. Replace https://your-domain.example with your real URL once deployed. -->
+<!-- SEO language links. Replace https://your-domain.example with your real URL once deployed.
+     Also add an og:image (1200x630 PNG in /assets) so shared links on LinkedIn show a preview. -->
 <link rel="canonical" href="https://your-domain.example/">
 <link rel="alternate" hreflang="en" href="https://your-domain.example/">
 <link rel="alternate" hreflang="es" href="https://your-domain.example/es/">
@@ -28,16 +29,16 @@
    IBM Plex Mono metadata. Full light + dark themes via [data-theme]. */
 
 :root{
-  --paper:#f3f6f7; --paper-2:#ffffff; --paper-3:#e9eef0; --fig-mat:#fbfcfd;
-  --ink:#15242f; --ink-2:#3f5764; --ink-3:#6c8390;
-  --line:rgba(21,36,47,.12); --line-2:rgba(21,36,47,.20);
-  --accent:#0d7a6b; --accent-ink:#ffffff; --accent-soft:rgba(13,122,107,.10);
+  --paper:#ffffff; --paper-2:#ffffff; --paper-3:#f6f7f8; --fig-mat:#fbfcfd;
+  --ink:#16222b; --ink-2:#44545e; --ink-3:#6f7d86;
+  --line:rgba(22,34,43,.11); --line-2:rgba(22,34,43,.20);
+  --accent:#0d7a6b; --accent-ink:#ffffff; --accent-soft:rgba(13,122,107,.08);
   --crop:#0f7d5f; --water:#2166a8; --risk:#b5731a;
   --crop-soft:rgba(15,125,95,.10); --water-soft:rgba(33,102,168,.10); --risk-soft:rgba(181,115,26,.12);
-  --nav-bg:rgba(243,246,247,.80);
-  --shadow:0 1px 2px rgba(21,36,47,.04), 0 12px 34px rgba(21,36,47,.07);
-  --shadow-lift:0 2px 4px rgba(21,36,47,.06), 0 20px 46px rgba(21,36,47,.12);
-  --contour:rgba(21,36,47,.06);
+  --nav-bg:rgba(255,255,255,.84);
+  --shadow:0 1px 2px rgba(22,34,43,.04), 0 10px 30px rgba(22,34,43,.06);
+  --shadow-lift:0 2px 4px rgba(22,34,43,.05), 0 18px 40px rgba(22,34,43,.10);
+  --contour:rgba(22,34,43,.07);
   --maxw:1140px; --r:12px; --r-lg:20px; --ease:cubic-bezier(.22,.61,.36,1);
 }
 [data-theme="dark"]{
@@ -84,7 +85,7 @@ header.nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(14px) saturate
 .brand .mark{width:34px;height:34px;flex:0 0 auto;border-radius:9px;background:var(--accent);display:flex;align-items:center;justify-content:center}
 .brand .mark svg{width:22px;height:22px;display:block}
 .brand small{display:block;font-family:"IBM Plex Mono",monospace;font-weight:400;font-size:.6rem;letter-spacing:.15em;color:var(--ink-3);text-transform:uppercase;margin-top:2px}
-nav.links{display:flex;align-items:center;gap:1.9rem}
+nav.links{display:flex;align-items:center;gap:1.5rem}
 nav.links a.lk{color:var(--ink-2);font-size:.92rem;font-weight:400;position:relative;transition:color .2s}
 nav.links a.lk:hover{color:var(--ink)}
 nav.links a.lk::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1.5px;background:var(--accent);transition:right .25s var(--ease)}
@@ -228,6 +229,33 @@ nav.links a.lk:hover::after{right:0}
 .lang-row:last-child{border-bottom:0}
 .lang-row .lvl{font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--accent)}
 
+/* Tools: interactive applications */
+.tools{background:var(--paper-3);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tool{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:40px;box-shadow:var(--shadow)}
+.tool-body .tag{display:inline-flex;align-items:center;gap:.5rem;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.9rem}
+.tool-body .tag .sq{width:11px;height:11px;border-radius:3px;background:var(--accent)}
+.tool-body h3{font-size:1.6rem;margin-bottom:.8rem;font-weight:600;letter-spacing:-.015em}
+.tool-body p{color:var(--ink-2);font-size:1.02rem}
+.tool-steps{list-style:none;padding:0;margin:1.1rem 0 1.4rem;display:grid;gap:.6rem}
+.tool-steps li{display:grid;grid-template-columns:26px 1fr;gap:.7rem;align-items:start;color:var(--ink-2);font-size:.94rem}
+.tool-steps li .i{width:26px;height:26px;border-radius:7px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.tool-steps li .i svg{width:14px;height:14px}
+.tool-steps li b{color:var(--ink);font-weight:600}
+.tool-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.tool-meta{margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:.45rem}
+.tool-meta span{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--ink-3);background:var(--paper-3);border:1px solid var(--line);border-radius:20px;padding:.25rem .65rem}
+.tool-fig{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--paper-3)}
+.tool-fig svg{width:100%;height:auto;display:block}
+.tool-fig .cap{display:block;font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--ink-3);padding:10px 16px;border-top:1px solid var(--line);background:var(--paper-2)}
+.tool-fig .kept{fill:var(--accent)}
+.tool-fig .drop{fill:var(--risk)}
+.tool-fig .ui{fill:var(--paper-2);stroke:var(--line-2)}
+.tool-fig .lbl{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:var(--ink-3)}
+.tool-fig .land{fill:var(--paper-2);stroke:var(--line-2)}
+.tool-fig .wtr{stroke:var(--water);opacity:.55}
+.tool-fig .ctr{stroke:var(--ink-3);opacity:.28}
+
+.steps-section{border-top:1px solid var(--line)}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
 .step{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 28px;position:relative;counter-increment:step}
 .step .num{font-family:"Spectral",serif;font-size:1.5rem;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
@@ -265,6 +293,8 @@ footer.site .soc svg{width:17px;height:17px}
   .svc-note{flex-direction:column;gap:14px}
   .case,.case:nth-child(even){grid-template-columns:1fr;gap:26px}
   .case:nth-child(even) .case-fig{order:0}
+  .tool{grid-template-columns:1fr;gap:28px;padding:28px}
+  .tool-fig{order:-1}
   .about-grid{grid-template-columns:1fr;gap:34px}
   .about-photo{max-width:340px}
 }
@@ -292,9 +322,29 @@ footer.site .soc svg{width:17px;height:17px}
   .btn:hover,.svc:hover,.nb:hover{transform:none}
 }
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--accent);color:var(--accent-ink);padding:.6rem 1rem;border-radius:8px;font-weight:500}
+.skip:focus{left:12px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Brian Valencia García",
+  "alternateName": "Jhon Brayan Valencia García",
+  "jobTitle": "Geospatial data scientist and consultant",
+  "description": "Spatial data science for climate-resilient agriculture: crop suitability, water resources, and climate-risk modelling.",
+  "email": "mailto:jbrayanvalenciag@gmail.com",
+  "knowsLanguage": ["es", "en", "ru"],
+  "sameAs": [
+    "https://www.linkedin.com/in/brayan-valencia-garcia-69041b173/",
+    "https://scholar.google.com/citations?user=9-GvmV0AAAAJ",
+    "https://github.com/Brianvgarcia"
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#services">Skip to content</a>
 
 <header class="nav" id="nav">
   <div class="wrap bar">
@@ -311,9 +361,10 @@ footer.site .soc svg{width:17px;height:17px}
       <a class="lk" href="#work">Work</a>
       <a class="lk" href="#services">Services</a>
       <a class="lk" href="#record">Publications</a>
+      <a class="lk" href="#tools">Tools</a>
       <a class="lk" href="#code">Notebooks</a>
       <a class="lk" href="#about">About</a>
-      <a class="btn btn-primary nav-cta" href="#contact">Start a conversation</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Get in touch</a>
       <a class="lang-tab" id="langTab" href="es/index.html" hreflang="es" aria-label="Ver la versión en español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>Español</a>
       <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch colour theme">
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -381,7 +432,7 @@ footer.site .soc svg{width:17px;height:17px}
     <div class="section-head reveal">
       <span class="eyebrow">Capabilities</span>
       <h2>Three questions I help teams answer</h2>
-      <p class="lead">These questions represent the core of my spatial data workflows. I provide complete technical transparency, delivering reproducible code and workflows that your internal team can easily verify and build upon.</p>
+      <p class="lead">Most projects come down to one of these three questions. Whatever the answer looks like, you get the code and the workflow with it, so your own team can check the method and run it again.</p>
     </div>
     <div class="svc-grid">
       <article class="svc crop reveal">
@@ -409,7 +460,7 @@ footer.site .soc svg{width:17px;height:17px}
       </div>
       <div class="txt">
         <h3>Underneath all of it: reproducible spatial pipelines</h3>
-        <p>Everything runs in R, Python, Google Earth Engine, and Quarto, so you can open it up and see exactly how it works. When new datasets are available, your team can execute the entire pipeline independently.</p>
+        <p>Everything runs in R, Python, Google Earth Engine, and Quarto, so you can open it and see exactly how it works. When new data arrives, your team can rerun the whole pipeline without me.</p>
       </div>
     </div>
   </div>
@@ -499,7 +550,7 @@ footer.site .soc svg{width:17px;height:17px}
     <div class="section-head reveal">
       <span class="eyebrow">Peer-reviewed record</span>
       <h2>The methods are already on the record</h2>
-      <p class="lead">Six peer-reviewed papers, more than 200 citations. The methodologies I apply are grounded in peer-reviewed frameworks, ensuring your team relies on scientifically defensible approaches.</p>
+      <p class="lead">Six peer-reviewed papers, more than 200 citations. The methods I use in client work are the same ones that went through review, so you can point to the paper when someone asks how the numbers were produced.</p>
     </div>
     <div class="pubs reveal">
       <div class="pub-row">
@@ -616,6 +667,80 @@ footer.site .soc svg{width:17px;height:17px}
   </div>
 </section>
 
+<section class="section tools" id="tools">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tools</span>
+      <h2>Applications you can use today</h2>
+      <p class="lead">Some of the work becomes a tool rather than a report. This one solves a problem that shows up in almost every project: field points that are wrong, duplicated, or sitting in the sea.</p>
+    </div>
+    <article class="tool reveal">
+      <div class="tool-body">
+        <div class="tag"><span class="sq"></span>Shiny web app · Spatial data cleaning</div>
+        <h3>GIS Data Cleaner</h3>
+        <p>Upload a point dataset, see it on a map, and fix it by hand where automatic rules are not enough. Delete outliers, move misplaced records, edit attributes, and export a clean GIS layer ready for QGIS, ArcGIS, R, or Python. No installation, no login.</p>
+        <ul class="tool-steps">
+          <li><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0l-4 4m4-4l4 4M4 20h16"/></svg></span><span><b>Upload</b> a CSV, Excel, GeoJSON, or zipped shapefile up to 50 MB</span></li>
+          <li><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14"/></svg></span><span><b>Plot</b> every record on an interactive map and inspect it against the terrain</span></li>
+          <li><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span><span><b>Clean</b> by hand: delete, drag, or edit points, a supervised pass that catches what rules miss</span></li>
+          <li><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg></span><span><b>Download</b> the result as GeoJSON or shapefile, with the attribute table intact</span></li>
+        </ul>
+        <div class="tool-actions">
+          <a class="btn btn-primary" href="https://briangis.shinyapps.io/GIS_data_cleaner/" target="_blank" rel="noopener">Open the app
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#contact">Need a custom version?</a>
+        </div>
+        <div class="tool-meta">
+          <span>R · Shiny</span><span>Leaflet</span><span>sf</span><span>GeoJSON · Shapefile</span><span>Files up to 50 MB</span>
+        </div>
+      </div>
+      <div class="tool-fig" aria-hidden="true">
+        <svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+          <!-- map ground -->
+          <rect x="0" y="0" width="520" height="360" fill="var(--paper-3)"/>
+          <path class="land" d="M-10 250 C60 200 90 120 170 110 C240 100 260 40 340 30 C420 20 470 60 540 40 L540 370 L-10 370 Z" stroke-width="1.2"/>
+          <path class="ctr" d="M40 300 C110 250 150 200 230 190 C300 180 330 130 400 120 C450 112 490 130 540 115" fill="none" stroke-width="1"/>
+          <path class="ctr" d="M20 330 C110 290 160 240 250 230 C330 220 350 175 420 165 C470 158 500 170 540 160" fill="none" stroke-width="1"/>
+          <path class="ctr" d="M90 360 C150 320 200 290 280 280 C350 270 380 230 450 220 C490 214 520 225 540 215" fill="none" stroke-width="1"/>
+          <!-- river -->
+          <path class="wtr" d="M300 30 C290 90 330 130 300 180 C270 230 330 280 290 360" fill="none" stroke-width="2.4" stroke-linecap="round"/>
+          <!-- coastline label -->
+          <text class="lbl" x="22" y="90">sea</text>
+          <!-- kept points -->
+          <g class="kept">
+            <circle cx="180" cy="150" r="4"/><circle cx="205" cy="172" r="4"/><circle cx="238" cy="160" r="4"/><circle cx="225" cy="205" r="4"/>
+            <circle cx="262" cy="188" r="4"/><circle cx="350" cy="120" r="4"/><circle cx="372" cy="150" r="4"/><circle cx="395" cy="135" r="4"/>
+            <circle cx="410" cy="180" r="4"/><circle cx="430" cy="210" r="4"/><circle cx="345" cy="220" r="4"/><circle cx="378" cy="250" r="4"/>
+            <circle cx="150" cy="240" r="4"/><circle cx="190" cy="270" r="4"/><circle cx="240" cy="300" r="4"/><circle cx="455" cy="270" r="4"/>
+            <circle cx="470" cy="100" r="4"/><circle cx="120" cy="300" r="4"/><circle cx="330" cy="300" r="4"/><circle cx="415" cy="310" r="4"/>
+          </g>
+          <!-- flagged points: in the sea, duplicated, off-grid -->
+          <g class="drop">
+            <circle cx="70" cy="140" r="5"/><circle cx="110" cy="70" r="5"/><circle cx="238" cy="160" r="8" fill="none" stroke="var(--risk)" stroke-width="1.5"/><circle cx="500" cy="330" r="5"/>
+          </g>
+          <g fill="none" stroke="var(--risk)" stroke-width="1.5" stroke-linecap="round">
+            <path d="M64 134l12 12M76 134l-12 12"/><path d="M104 64l12 12M116 64l-12 12"/><path d="M494 324l12 12M506 324l-12 12"/>
+          </g>
+          <!-- moved point -->
+          <g stroke="var(--accent)" stroke-width="1.4" fill="none" stroke-dasharray="3 3"><path d="M300 260 L262 188"/></g>
+          <circle cx="300" cy="260" r="4" fill="none" stroke="var(--accent)" stroke-width="1.4"/>
+          <!-- toolbar -->
+          <rect class="ui" x="14" y="14" width="196" height="30" rx="7" stroke-width="1"/>
+          <text class="lbl" x="28" y="33">select</text><text class="lbl" x="76" y="33">move</text><text class="lbl" x="118" y="33">delete</text><text class="lbl" x="170" y="33">edit</text>
+          <!-- legend / export -->
+          <rect class="ui" x="372" y="14" width="134" height="60" rx="7" stroke-width="1"/>
+          <circle cx="388" cy="32" r="4" class="kept"/><text class="lbl" x="398" y="35">kept  ·  20</text>
+          <circle cx="388" cy="52" r="4" class="drop"/><text class="lbl" x="398" y="55">flagged  ·  4</text>
+          <rect x="372" y="322" width="134" height="26" rx="6" fill="var(--accent)"/>
+          <text x="439" y="339" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="var(--accent-ink)">Download GeoJSON</text>
+        </svg>
+        <span class="cap">Supervised cleaning: keep, drop, or move each record before export</span>
+      </div>
+    </article>
+  </div>
+</section>
+
 <section class="section" id="about">
   <div class="wrap">
     <div class="about-grid">
@@ -633,7 +758,7 @@ footer.site .soc svg{width:17px;height:17px}
           <div class="chip-box">
             <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>Languages &amp; tools</h4>
             <div class="chip-list">
-              <span>R</span><span>Python</span><span>Google Earth Engine</span><span>QGIS</span><span>ArcGIS</span><span>PostGIS</span><span>sf / terra</span><span>tidymodels</span><span>MaxEnt</span><span>InVEST</span><span>Quarto</span>
+              <span>R</span><span>Python</span><span>Google Earth Engine</span><span>QGIS</span><span>ArcGIS</span><span>PostGIS</span><span>sf / terra</span><span>tidymodels</span><span>MaxEnt</span><span>InVEST</span><span>Quarto</span><span>Shiny</span><span>Leaflet</span>
             </div>
           </div>
           <div class="chip-box">
@@ -659,18 +784,18 @@ footer.site .soc svg{width:17px;height:17px}
       <article class="step reveal">
         <div class="num"><span class="rule"></span></div>
         <h3>Scoping call</h3>
-        <p>A brief call to review your technical objectives, available spatial datasets, and whether the project aligns with my geospatial expertise.</p>
+        <p>A short call to go through what you want to know, what spatial data you already have, and whether the project is a good fit for the way I work.</p>
         <div class="free">No charge for this conversation</div>
       </article>
       <article class="step reveal d1">
         <div class="num"><span class="rule"></span></div>
         <h3>Proposal &amp; scope</h3>
-        <p>If we go ahead, I send a short proposal with the deliverables and a timeline. Some projects are a two-week analysis. Others are multi-month pipelines or an interactive tool. It depends on the data.</p>
+        <p>If we go ahead, I send a short proposal with the deliverables and a timeline. Some projects are a two-week analysis. Others are multi-month pipelines or an interactive Shiny tool. It depends on the data and on what you need to do with the result.</p>
       </article>
       <article class="step reveal d2">
         <div class="num"><span class="rule"></span></div>
         <h3>Delivery &amp; handoff</h3>
-        <p>Final deliverables include the spatial models, production-ready maps, a comprehensive report, and fully documented source code. Built entirely in R and Quarto, the pipeline allows your team to execute updates independently as new datasets become available.</p>
+        <p>You receive the spatial models, final maps, a written report, and documented source code, or a working web application if that is what the project needs. Pipelines are built in R, Python, Google Earth Engine, and Quarto, so your team can rerun them when new data arrives.</p>
       </article>
     </div>
   </div>
